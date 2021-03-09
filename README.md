@@ -1,6 +1,6 @@
 ### Hi 👋 right now I am doing stuff in Azure and PowerShell
 
-I left social media in 2021, but you cn still message me about code here on Github.
+I left social media in 2021, but I still welcome messages about code here on Github.
 
 #### PowerShell for IT Helpdesk and Admins
 I wrote a book on PowerShell, you can fnd it through my [Amazon author page](http://amazon.com/author/kamsalisbury).
