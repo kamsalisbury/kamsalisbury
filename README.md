@@ -12,6 +12,6 @@ I wrote a book on PowerShell, you can fnd it through my [Amazon author page](htt
 #### Thanks for visiting my code
 Please consider keeping the coffee flowing by [donating to my coding efforts](https://paypal.me/kamsalisbury?locale.x=en_US).
 
-<!-- Experiment with github-readme-stats -->
+<!-- Experiment with https://github.com/anuraghazra/github-readme-stats -->
 ![Kam's GitHub stats](https://github-readme-stats.vercel.app/api?username=kamsalisbury&count_private=true&show_icons=true&theme=synthwave)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamsalisbury&layout=compact)](https://github.com/kamsalisbury)
