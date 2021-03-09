@@ -6,4 +6,4 @@ Thanks for visiting my code.
 
 <!-- Experiment with github-readme-stats -->
 ![Kam's GitHub stats](https://github-readme-stats.vercel.app/api?username=kamsalisbury&count_private=true&show_icons=true&theme=synthwave)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=amsalisbury&layout=compact)](https://github.com/kamsalisbury)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamsalisbury&layout=compact)](https://github.com/kamsalisbury)
