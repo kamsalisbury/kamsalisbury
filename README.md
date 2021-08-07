@@ -7,8 +7,7 @@ I wrote a book on PowerShell, you can fnd it through my [Amazon author page](htt
 
 #### Continuous Education is My Jam
 * MBA Information Management, Grantham University 2012
-* More certifications than [posted here](https://www.youracclaim.com/users/kam-salisbury/badges).
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ccb0f622-1961-4acc-acc3-e608bdea2646" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+* More certifications than [posted here](https://www.credly.com/users/kam-salisbury).
 
 #### Thanks for visiting my code
 Please consider keeping the coffee flowing by [donating to my coding efforts](https://paypal.me/kamsalisbury?locale.x=en_US).
