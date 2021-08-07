@@ -15,3 +15,4 @@ Please consider keeping the coffee flowing by [donating to my coding efforts](ht
 <!-- Experiment with https://github.com/anuraghazra/github-readme-stats -->
 ![Kam's GitHub stats](https://github-readme-stats.vercel.app/api?username=kamsalisbury&count_private=true&show_icons=true&theme=synthwave)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamsalisbury&layout=compact)](https://github.com/kamsalisbury)
+![My PowerSHell Repo Stats](https://contrib.rocks/image?repo=kamsalisbury/ps)
