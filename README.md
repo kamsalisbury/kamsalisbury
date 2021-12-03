@@ -1,4 +1,4 @@
-### Hi 👋 right now I am doing stuff in Azure, PowerShell and web application bug hunting
+### Hi 👋 right now I am doing stuff in Azure, PowerShell and Web Application Bug Hunting
 
 This is the right place to call out an issue with my publically published code here on Github.
 
