@@ -1,6 +1,6 @@
-### Hi 👋 right now I am doing stuff in Azure and PowerShell
+### Hi 👋 right now I am doing stuff in Azure, PowerShell and web application bug hunting
 
-I left social media in 2021, but I still welcome messages about code here on Github.
+This is the right place to call out an issue with my publically published code here on Github.
 
 #### PowerShell for IT Helpdesk and Admins
 I wrote a book on PowerShell, you can fnd it through my [Amazon author page](http://amazon.com/author/kamsalisbury).
