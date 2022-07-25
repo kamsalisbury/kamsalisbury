@@ -11,7 +11,7 @@ I wrote a book on PowerShell, you can find it through my [Amazon author page](ht
 * My not so recent certifications are: Novell Netware 4/5 CNA, Microsoft Windows Server/Exchange MCSE, Cisco Telepresence Administrator SVS2 
 
 #### Social Media & Blogging
-I am not on social media or blogging platforms.If you find a Kam on social media or a blogging platform, they are not the Kam you are looking for.
+I am not on social media or blogging platforms. If you find a Kam on social media or a blogging platform, they are not the Kam you are looking for.
 
 #### Github Stats
 <!-- Experiment with https://github.com/anuraghazra/github-readme-stats -->
