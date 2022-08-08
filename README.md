@@ -1,4 +1,4 @@
-### 👋 Hi! I do stuff in Azure, PowerShell, Redhat Linux and CyberSecurity.
+### 👋 Hi! I do stuff in Azure, PowerShell, Redhat Linux, macOS and CyberSecurity.
 
 Trying to connect? Github includes ways for us to collaborate on code or for anyone to call out an issue with committed code. For anything else, my email is visible on [my github profile](https://github.com/kamsalisbury).
 
