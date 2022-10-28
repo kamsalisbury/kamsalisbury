@@ -12,6 +12,7 @@ I wrote a book on PowerShell, you can find it through my [Amazon author page](ht
 
 #### Social Media & Blogging
 I am not on social media or blogging platforms. If you find a Kam on social media or a blogging platform, they are not this Kam.
+[My research is ORCID identified](https://orcid.org/0000-0002-3453-9587).
 
 #### Github Stats
 <!-- Experiment with https://github.com/anuraghazra/github-readme-stats -->
