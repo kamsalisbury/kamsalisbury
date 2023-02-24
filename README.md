@@ -1,6 +1,6 @@
 ## 👋 Hi! I do stuff in Azure, PowerShell, Redhat Linux, macOS and CyberSecurity.
 
-I am not a full time developer but I write code every day, even on Sunday.
+I write code at work and for myself, bu I am not a developer. Don't believe the stereotype.
 
 Trying to connect? Github includes ways for us to collaborate on code or for anyone to call out an issue with committed code. For anything else, my email is visible on [my github profile](https://github.com/kamsalisbury).
 
