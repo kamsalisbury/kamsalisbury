@@ -13,7 +13,7 @@ I wrote a book on PowerShell, you can find it through these non-affiliate links 
 * My not so recent certifications are: Novell Netware 4/5 CNA, Microsoft Windows Server/Exchange MCSE, Cisco Telepresence Administrator SVS2 
 
 #### Social Media & Blogging
-I am not on social media (only personal IRL family on FB) or blogging platforms. If you find a Kam on social media or a blogging platform, they are not this Kam.
+I am not on social media or blogging platforms. If you find a Kam on social media or a blogging platform, they are not this Kam.
 [My research is ORCID identified](https://orcid.org/0000-0002-3453-9587).
 
 #### Github Stats
