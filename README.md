@@ -1,6 +1,6 @@
-## 👋 Hi! I do stuff in Azure, PowerShell, Redhat Linux, macOS and CyberSecurity.
+## 👋 Hi! I do stuff in PowerShell and CyberSecurity.
 
-Trying to connect? Github includes ways for us to collaborate on code or for anyone to call out an issue with committed code. For anything else, my LinkedIn is visible on [my github profile](https://github.com/kamsalisbury).
+I welcome collaborating with you here on Github and messaging with you on LinkedIn.
 
 #### PowerShell for IT Helpdesk and Admins
 I wrote a book on PowerShell, you can find it through these non-affiliate links on my [Amazon author page](http://amazon.com/author/kamsalisbury), on [Apple Books](http://books.apple.com/us/book/id1573751396) and the [Google Play Store](https://play.google.com/store/books/details/Kam_Salisbury_PowerShell_for_IT_Helpdesk_and_Admin?id=MccyEAAAQBAJ&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1).
