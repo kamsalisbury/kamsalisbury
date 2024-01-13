@@ -3,7 +3,7 @@
 I welcome collaborating with you on Github and/or LinkedIn.
 
 #### PowerShell for IT Helpdesk and Admins
-I wrote a book on PowerShell, you can find it through these non-affiliate links on my [Amazon author page](http://amazon.com/author/kamsalisbury), on [Apple Books](http://books.apple.com/us/book/id1573751396) and the [Google Play Store](https://play.google.com/store/books/details/Kam_Salisbury_PowerShell_for_IT_Helpdesk_and_Admin?id=MccyEAAAQBAJ&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1).
+I wrote a book on PowerShell (no longer for sale).
 
 #### Education and Certifications
 * MBA Information Management, Grantham University 2012
