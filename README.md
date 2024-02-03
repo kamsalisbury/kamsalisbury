@@ -1,24 +1,16 @@
-## 👋 Hi! I do stuff in Azure Cloud, PowerShell and CyberSecurity.
+## 👋 Hi! I am a senior Azure cloud engineer and PowerShell expert.
 
-I welcome connecting with you here on [Github](https://github.com/kamsalisbury) or on [LinkedIn](https://www.linkedin.com/in/kam-reef-salisbury). I am currently experimenting with a [Youtube Channel](https://www.youtube.com/@kamsalisbury) as well.
+You can find projects I share here on [Github](https://github.com/kamsalisbury), my [Youtube Channel](https://www.youtube.com/@kamsalisbury) and on [LinkedIn](https://www.linkedin.com/in/kam-reef-salisbury). Any applicable industry research is [ORCID identified](https://orcid.org/0000-0002-3453-9587).
 
-If you find a Kam on social media or blogging platforms, they are not this Kam.
+Please note that I am not affiliated with any other Kam on social media or blogging platforms. I am the original and unique Kam.
 
-I wrote a book, PowerShell for IT Helpdesk and Admins (no longer for sale).
+I am the author of a book called PowerShell for IT Helpdesk and Admins, which is no longer available for purchase.
 
-#### Education and Certifications
-* MBA Information Management, Grantham University 2012
-* My recent certifications are [posted here](https://www.credly.com/users/kam-salisbury)
-* My not so recent certifications are: Novell Netware 4/5 CNA, Microsoft Windows Server/Exchange MCSE, Cisco Telepresence Administrator SVS2 
-
-[My research is ORCID identified](https://orcid.org/0000-0002-3453-9587).
+I have a MBA in Information Management from Grantham University (2012) and several certifications in cloud, networking, and telepresence. You can check out my recent certifications [here](https://www.credly.com/users/kam-salisbury). Some of my older certifications include Novell Netware 4/5 CNA, Microsoft Windows Server/Exchange MCSE, and Cisco Telepresence Administrator SVS2.
 
 #### Github Stats
-<!-- Experiment with https://github.com/anuraghazra/github-readme-stats -->
-![Kam's GitHub stats](https://github-readme-stats.vercel.app/api?username=kamsalisbury&count_private=true&show_icons=true&theme=synthwave)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kamsalisbury&layout=compact)](https://github.com/kamsalisbury)
+
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kamsalisbury&theme=github_dark" />
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=kamsalisbury&theme=algolia)]()
-</p>
-
