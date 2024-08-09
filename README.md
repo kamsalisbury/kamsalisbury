@@ -13,6 +13,8 @@ My book, [PowerShell for IT Helpdesk and Admins](https://github.com/kamsalisbury
 
 Any applicable industry research is [ORCID identified](https://orcid.org/0000-0002-3453-9587).
 
+![AbuseIPDB Contributor Badge](https://www.abuseipdb.com/contributor/26499.svg)
+
 ### Articles
 
 [Ansible and Azure Cloud Shell](https://www.linkedin.com/pulse/ansible-azure-cloud-shell-kam-reef-salisbury-8yu1e/)
@@ -28,3 +30,4 @@ Any applicable industry research is [ORCID identified](https://orcid.org/0000-00
 [How To Detect SSH Public Key Login Attempts](https://www.linkedin.com/pulse/how-detect-ssh-public-key-login-attempts-kam-reef-salisbury)
 
 [Sometimes Simpler Cybersecurity Is Better Cybersecurity](https://www.linkedin.com/pulse/sometimes-simpler-cybersecurity-better-kam-reef-salisbury)
+
