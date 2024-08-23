@@ -45,5 +45,6 @@ $subnet2 = @{
 }
 $subnetConfig2 = Add-AzVirtualNetworkSubnetConfig @subnet2 -Verbose
 
+# ISSUE: Currently, New-AzBastion does not support the Developer Sku.
 #Write-Host "Creating Bastion Host..."
 #New-AzBastion -ResourceGroupName $rgName -Name $bastionName -VirtualNetworkName $virtualNetwork.Name -Location $location -Sku "Developer"
