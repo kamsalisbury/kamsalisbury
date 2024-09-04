@@ -5,12 +5,12 @@ $tags = @{"Project"="Dev"; "CostCenter"="KSS"}
 $vnetName = 'vnet-1'
 $addrPre = '10.0.0.0/16'
 $subnetName1 = 'Internal'
-$subnet1Pre = '10.177.1.0/24'
+$subnet1Prefix = '10.177.1.0/24'
 $subnetName2 = 'External'
-$subnet2Pre = '10.177.2.0/24'
-$bastionName = "KSS-Bastion"
-$bastionSubnetName = "kssInternal"
-$bastionAddressPrefix = "10.0.1.0/24"
+$subnet2Prefix = '10.177.2.0/24'
+#$bastionName = "KSS-Bastion"
+#$bastionSubnetName = "kssInternal"
+#$bastionAddressPrefix = "10.0.1.0/24"
 $VM1 = "Apollo"
 $VM2 = "Athena"
 
@@ -36,14 +36,14 @@ Write-Host "Creating Virtual Network Subnets..."
 $subnet1 = @{
     Name = $subnetName1
     VirtualNetwork = $virtualNetwork
-    AddressPrefix = $subnet1Pre
+    AddressPrefix = $subnet1Prefix
 }
 $subnetConfig1 = Add-AzVirtualNetworkSubnetConfig @subnet1 -Verbose
 
 $subnet2 = @{
     Name = $subnetName2
     VirtualNetwork = $virtualNetwork
-    AddressPrefix = $subnet2Pre
+    AddressPrefix = $subnet2Prefix
 }
 $subnetConfig2 = Add-AzVirtualNetworkSubnetConfig @subnet2 -Verbose
 
