@@ -41,7 +41,7 @@ $nic = New-AzNetworkInterface -Name $nicName -ResourceGroupName $resourceGroupNa
 Write-Host "Creating VM configuration..."
 $virtualMachine = New-AzVMConfig -VMName $vmName1 -VMSize $vmSize
 # Reference https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem?view=azps-12.2.0
-$virtualMachine = Set-AzVMOperatingSystem -VM $virtualMachine -Linux -ComputerName $vmName1 -DisablePasswordAuthentication -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
+$virtualMachine = Set-AzVMOperatingSystem -VM $virtualMachine -Linux -ComputerName $vmName1 -DisablePasswordAuthentication
 $virtualMachine = Set-AzVMBootDiagnostic -VM $virtualMachine -Disable
 $virtualMachine = Add-AzVMNetworkInterface -VM $virtualMachine -Id $nic.Id
 $virtualMachine = Set-AzVMSourceImage -VM $virtualMachine -PublisherName $publisherName -Offer $offerName -Skus $skuName -Version latest
