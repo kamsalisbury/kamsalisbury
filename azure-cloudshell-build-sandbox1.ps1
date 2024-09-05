@@ -34,7 +34,7 @@ $nicName = $vmName1
 # Set VM virtual network
 Write-Host "Creating Virtual Network and Subnet..."
 $singleSubnet = New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix
-$vnet = New-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroupName-Location $location -AddressPrefix $vnetAddressPrefix -Subnet $singleSubnet
+$vnet = New-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroupName -Location $location -AddressPrefix $vnetAddressPrefix -Subnet $singleSubnet
 $nic = New-AzNetworkInterface -Name $nicName -ResourceGroupName $resourceGroupName -Location $location -SubnetId $vnet.Subnets[0].Id
 # Set VM login for now - in the future we want bastion host or ssh key only
 #$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
