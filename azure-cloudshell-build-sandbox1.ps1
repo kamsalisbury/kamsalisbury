@@ -39,6 +39,10 @@ $nic = New-AzNetworkInterface -Name $nicName -ResourceGroupName $resourceGroupNa
 #$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
 # Set new VM configuration
 Write-Host "Creating VM configuration..."
+# Create ssh key, don't use rsa
+ssh-keygen -t ed25519
+$sshPublicKey = Get-Content -Path "~/.ssh/id_ed25519.pub"
+Add-AzVMSSHKey -VM $virtualMachine -KeyData $sshPublicKey -Path "/home/azureuser/.ssh/authorized_keys"
 $virtualMachine = New-AzVMConfig -VMName $vmName1 -VMSize $vmSize
 # Reference https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem?view=azps-12.2.0
 $virtualMachine = Set-AzVMOperatingSystem -VM $virtualMachine -Linux -ComputerName $vmName1 -Credential (Get-Credential) -DisablePasswordAuthentication
