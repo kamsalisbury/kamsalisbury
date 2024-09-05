@@ -1,18 +1,8 @@
 # Variables
-$resourceGroupName = 'KSS3'
+$resourceGroupName = 'KSS1'
 $location = 'northcentralus'
 $tags = @{"Project"="Dev"; "CostCenter"="KSS"}
-$vnetName = 'vnet-1'
-$addrPre = '10.0.0.0/16'
-$subnetName1 = 'Internal'
-$subnet1Prefix = '10.177.1.0/24'
-$subnetName2 = 'External'
-$subnet2Prefix = '10.177.2.0/24'
-#$bastionName = "KSS-Bastion"
-#$bastionSubnetName = "kssInternal"
-#$bastionAddressPrefix = "10.0.1.0/24"
-$VM1 = "Apollo"
-$VM2 = "Athena"
+$vmName1 = "Apollo"
 
 Write-Host "Creating Resource Group..."
 $rg = @{
@@ -23,60 +13,38 @@ $rg = @{
 New-AzResourceGroup @rg -Verbose
 Start-Sleep -Seconds 15
 
-Write-Host "Creating Virtual Network..."
-$vnet = @{
-    Name = $vnetName
-    ResourceGroupName = $resourceGroupName
-    Location = $location
-    AddressPrefix = $addrPre
-}
-$virtualNetwork = New-AzVirtualNetwork @vnet -Verbose
-
-Write-Host "Creating Virtual Network Subnets..."
-$subnet1 = @{
-    Name = $subnetName1
-    VirtualNetwork = $virtualNetwork
-    AddressPrefix = $subnet1Prefix
-}
-$subnetConfig1 = Add-AzVirtualNetworkSubnetConfig @subnet1 -Verbose
-
-$subnet2 = @{
-    Name = $subnetName2
-    VirtualNetwork = $virtualNetwork
-    AddressPrefix = $subnet2Prefix
-}
-$subnetConfig2 = Add-AzVirtualNetworkSubnetConfig @subnet2 -Verbose
-
-# ISSUE: Currently, New-AzBastion does not support the Developer Sku.
-#Write-Host "Creating Bastion Host..."
-#New-AzBastion -ResourceGroupName $resourceGroupName -Name $bastionName -VirtualNetworkName $virtualNetwork.Name -Location $location -Sku "Developer"
-
-# New-AzVm -ResourceGroupName $resourceGroupName -Name $VM1 -Location $location -Image 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest' -VirtualNetworkName $virtualNetwork.Name -SubnetName $subnetName1 -SecurityGroupName 'myNetworkSecurityGroup' -PublicIpAddressName 'myPublicIpAddress' -OpenPorts 80,3389
-
-
-$VMLocalAdminUser = "LocalAdminUser"
-$VMLocalAdminSecurePassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
-$LocationName = "eastus2"
-$ResourceGroupName = "MyResourceGroup"
-$ComputerName = "MyVM"
-$VMName = "MyVM"
-$VMSize = "Standard_DS3"
-
-$NetworkName = "MyNet"
-$NICName = "MyNIC"
-$SubnetName = "MySubnet"
-$SubnetAddressPrefix = "10.0.0.0/24"
-$VnetAddressPrefix = "10.0.0.0/16"
-
-$SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
-$Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
-$NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id
-
-$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
-
-$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
-$VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
-$VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
-$VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'WindowsServer' -Skus '2022-datacenter-azure-edition-core' -Version latest
-
-New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+# Reference: List VMimage SKUs https://learn.microsoft.com/en-us/azure/virtual-machines/windows/cli-ps-findimage
+# Get-AzVMImage -Location $location -PublisherName Redhat -Offer RHEL -Sku 9_4 | Select Version
+# Set the Marketplace image
+$publisherName = "Redhat"
+$offerName = "RHEL"
+$skuName = "9_4"
+$version = "9.4.2024081415"
+$vmSize = "Standard_B1s"
+# https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvm?view=azps-12.3.0#example-3-create-a-vm-from-a-marketplace-image-without-a-public-ip
+# Set VM Variables
+#$VMLocalAdminUser = "LocalAdminUser"
+#$VMLocalAdminSecurePassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
+$computerName = $vmName1
+$networkName = "kssNet"
+$vnetAddressPrefix = "10.188.0.0/16"
+$subnetName = "vmSubnet"
+$subnetAddressPrefix = "10.188.0.0/24"
+$nicName = $vmName1
+# Set VM virtual network
+Write-Host "Creating Virtual Network and Subnet..."
+$singleSubnet = New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix
+$vnet = New-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroupName-Location $location -AddressPrefix $vnetAddressPrefix -Subnet $singleSubnet
+$nic = New-AzNetworkInterface -Name $nicName -ResourceGroupName $resourceGroupName -Location $location -SubnetId $vnet.Subnets[0].Id
+# Set VM login for now - in the future we want bastion host or ssh key only
+#$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+# Set new VM configuration
+Write-Host "Creating VM configuration..."
+$virtualMachine = New-AzVMConfig -VMName $vmName1 -VMSize $vmSize
+# Reference https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem?view=azps-12.2.0
+$virtualMachine = Set-AzVMOperatingSystem -VM $virtualMachine -Linux -ComputerName $ComputerName -DisablePasswordAuthentication -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
+$virtualMachine = Add-AzVMNetworkInterface -VM $virtualMachine -Id $nic.Id
+$virtualMachine = Set-AzVMSourceImage -VM $virtualMachine -PublisherName $publisherName -Offer $offerName -Skus $skuName -Version latest
+# Create the VM
+Write-Host "Creating the VM..."
+New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -Verbose
