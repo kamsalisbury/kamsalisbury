@@ -41,5 +41,5 @@ Add-AzVMNetworkInterface -VM $virtualMachine -Id $nic.Id
 Set-AzVMSourceImage -VM $virtualMachine -PublisherName $publisherName -Offer $offerName -Skus $skuName -Version latest
 # Create the VM
 Write-Host "Creating the VM..."
-New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -SshKeyName 'ed25519' -GenerateSshKey -NetworkInterfaceDeleteOption 'Delete' -Verbose
+New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -SshKeyName 'ed25519' -GenerateSshKey -Verbose
 #Set-AzVMOperatingSystem -VM $virtualMachine -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
