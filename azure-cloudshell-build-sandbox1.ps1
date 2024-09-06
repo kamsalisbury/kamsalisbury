@@ -45,11 +45,11 @@ Write-Host "Creating VM configuration..."
 #Add-AzVMSshPublicKey -VM $virtualMachine -KeyData $sshPublicKey -Path "/home/azureuser/.ssh/authorized_keys"
 $virtualMachine = New-AzVMConfig -VMName $vmName1 -VMSize $vmSize
 # Reference https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem?view=azps-12.2.0
-$virtualMachine = Set-AzVMOperatingSystem -VM $virtualMachine -Linux -ComputerName $vmName1 -Credential (Get-Credential) -DisablePasswordAuthentication
-$virtualMachine = Set-AzVMBootDiagnostic -VM $virtualMachine -Disable
-$virtualMachine = Add-AzVMNetworkInterface -VM $virtualMachine -Id $nic.Id
-$virtualMachine = Set-AzVMSourceImage -VM $virtualMachine -PublisherName $publisherName -Offer $offerName -Skus $skuName -Version latest
+Set-AzVMOperatingSystem -VM $virtualMachine -Linux -ComputerName $vmName1 -Credential (Get-Credential) -DisablePasswordAuthentication
+Set-AzVMBootDiagnostic -VM $virtualMachine -Disable
+Add-AzVMNetworkInterface -VM $virtualMachine -Id $nic.Id
+Set-AzVMSourceImage -VM $virtualMachine -PublisherName $publisherName -Offer $offerName -Skus $skuName -Version latest
 # Create the VM
 Write-Host "Creating the VM..."
 New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -SshKeyName 'ed25519' -GenerateSshKey -LicenseType 'RHEL_BYOS' -NetworkInterfaceDeleteOption 'Delete' -Verbose
-Set-AzVMOperatingSystem -VM $virtualMachine -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
+#Set-AzVMOperatingSystem -VM $virtualMachine -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
