@@ -51,5 +51,5 @@ $virtualMachine = Add-AzVMNetworkInterface -VM $virtualMachine -Id $nic.Id
 $virtualMachine = Set-AzVMSourceImage -VM $virtualMachine -PublisherName $publisherName -Offer $offerName -Skus $skuName -Version latest
 # Create the VM
 Write-Host "Creating the VM..."
-New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -Verbose
+New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -GenerateSshKey -Verbose
 Set-AzVMOperatingSystem -VM $virtualMachine -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
