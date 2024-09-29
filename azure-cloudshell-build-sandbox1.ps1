@@ -1,5 +1,5 @@
 # Variables
-$resourceGroupName = 'KSS2'
+$resourceGroupName = 'KSS3'
 $location = 'northcentralus'
 $tags = @{"Project"="Dev"; "CostCenter"="KSS"}
 $vmName1 = "Apollo"
@@ -43,3 +43,4 @@ Set-AzVMSourceImage -VM $virtualMachine -PublisherName $publisherName -Offer $of
 Write-Host "Creating the VM..."
 New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -SshKeyName 'ed25519' -GenerateSshKey -Verbose
 #Set-AzVMOperatingSystem -VM $virtualMachine -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
+Write-Host "CAUTION: The VM's only copy of the SSH PRIVATE KEY is saved in this Cloud Shell! Store the key in an Azure Key Vault or download it immediately."
