@@ -1,3 +1,6 @@
+# This script automates building a Resource Group, Private Network, associated Subnet, and VM with SSH login and without a public IP. 
+Write-Host "This script automates building a Resource Group, Private Network, associated Subnet, and VM with SSH login and without a public IP."
+
 # Variables
 $resourceGroupName = 'KSS3'
 $location = 'northcentralus'
