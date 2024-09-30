@@ -51,6 +51,7 @@ Write-Host "CAUTION: The VM's only copy of the SSH PRIVATE KEY is saved in this 
 Write-Host "Creating the Key Vault..."
 $vaultName = "kss-vm-access"
 New-AzKeyVault -ResourceGroupName $resourceGroupName -VaultName $vaultName -Location $location
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -UserPrincipalName 'kam.salisbury.it@icloud.com' -PermissionsToSecrets Get,List,Set
 $secretName = $vmName1
 $sshPrivateKeyPath = $vm.OSProfile.LinuxConfiguration.Ssh.PublicKeys[0].Path -replace "\.pub$", ""
 $sshPrivateKey = Get-Content -Path $sshPrivateKeyPath -Raw
