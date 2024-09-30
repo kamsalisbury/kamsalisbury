@@ -5,7 +5,7 @@ Write-Host "This script automates building a Resource Group, Private Network, as
 $resourceGroupName = 'KSS4'
 $location = 'northcentralus'
 $tags = @{"Project"="Dev"; "CostCenter"="KSS"}
-$vmName1 = "Apollo"
+$vmName1 = "vm-" + (New-Guid).Guid.Substring(0, 8)
 
 Write-Host "Creating Resource Group..."
 $rg = @{
