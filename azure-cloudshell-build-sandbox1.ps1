@@ -2,7 +2,7 @@
 Write-Host "This script automates building a Resource Group, Private Network, associated Subnet, and VM with SSH login and without a public IP."
 
 # Variables
-$resourceGroupName = 'KSS3'
+$resourceGroupName = 'KSS4'
 $location = 'northcentralus'
 $tags = @{"Project"="Dev"; "CostCenter"="KSS"}
 $vmName1 = "Apollo"
@@ -47,3 +47,12 @@ Write-Host "Creating the VM..."
 New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $virtualMachine -SshKeyName 'ed25519' -GenerateSshKey -Verbose
 #Set-AzVMOperatingSystem -VM $virtualMachine -ProvisionVMAgent -PatchMode "AutomaticByPlatform" -EnableHotpatching
 Write-Host "CAUTION: The VM's only copy of the SSH PRIVATE KEY is saved in this Cloud Shell! Store the key in an Azure Key Vault or download it immediately."
+# Create Key Vault and store SSH Private Key
+Write-Host "Creating the Key Vault..."
+$vaultName = "kss-vm-access"
+New-AzKeyVault -ResourceGroupName $resourceGroupName -VaultName $vaultName -Location $location
+$secretName = $vmName1
+$sshPrivateKeyPath = $vm.OSProfile.LinuxConfiguration.Ssh.PublicKeys[0].Path -replace "\.pub$", ""
+$sshPrivateKey = Get-Content -Path $sshPrivateKeyPath -Raw
+Set-AzKeyVaultSecret -VaultName $vaultName -Name $secretName -SecretValue (ConvertTo-SecureString $sshPrivateKey -AsPlainText -Force)
+Write-Host "VM Ready! Connect with Bastion Host and Azure Key Vault stored key."
