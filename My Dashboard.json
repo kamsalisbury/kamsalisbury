@@ -1,0 +1,124 @@
+{
+  "properties": {
+    "lenses": [
+      {
+        "order": 0,
+        "parts": [
+          {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "colSpan": 4,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [],
+              "type": "Extension/HubsExtension/PartType/MarkdownPart",
+              "settings": {
+                "content": {
+                  "content": "__My data__\n\n<a href='https://shell.azure.com/powershell' target='_blank'>Az Cloud Shell</a>\n<br />\n<a href='https://vscode.dev/' target='_blank'>VScode.dev</a>\n\n__Reference__\n\n<a href='https://graphpermissions.merill.net/permission/' target='_blank'>Graph Permissions</a>\n",
+                  "title": "My title",
+                  "subtitle": "My subtitle",
+                  "markdownSource": 1,
+                  "markdownUri": ""
+                }
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 4,
+              "y": 0,
+              "colSpan": 2,
+              "rowSpan": 3
+            },
+            "metadata": {
+              "inputs": [],
+              "type": "Extension/Microsoft_Azure_Security/PartType/SecurityMetricGalleryTileViewModel"
+            }
+          },
+          {
+            "position": {
+              "x": 6,
+              "y": 0,
+              "colSpan": 4,
+              "rowSpan": 2
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "userObjectId",
+                  "isOptional": true
+                },
+                {
+                  "name": "startDate",
+                  "isOptional": true
+                },
+                {
+                  "name": "endDate",
+                  "isOptional": true
+                },
+                {
+                  "name": "fromAppsTile",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/Microsoft_AAD_IAM/PartType/UsersActivitySummaryReportPart"
+            }
+          },
+          {
+            "position": {
+              "x": 4,
+              "y": 3,
+              "colSpan": 2,
+              "rowSpan": 1
+            },
+            "metadata": {
+              "inputs": [],
+              "type": "Extension/Microsoft_Azure_Health/PartType/ServiceIssuesPinnedPart"
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "model": {
+        "timeRange": {
+          "value": {
+            "relative": {
+              "duration": 24,
+              "timeUnit": 1
+            }
+          },
+          "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+        },
+        "filterLocale": {
+          "value": "en-us"
+        },
+        "filters": {
+          "value": {
+            "MsPortalFx_TimeRange": {
+              "model": {
+                "format": "utc",
+                "granularity": "auto",
+                "relative": "24h"
+              },
+              "displayCache": {
+                "name": "UTC Time",
+                "value": "Past 24 hours"
+              },
+              "filteredPartIds": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "name": "My Dashboard",
+  "type": "Microsoft.Portal/dashboards",
+  "location": "INSERT LOCATION",
+  "tags": {
+    "hidden-title": "My Dashboard"
+  },
+  "apiVersion": "2022-12-01-preview"
+}
