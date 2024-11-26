@@ -16,7 +16,7 @@
               "type": "Extension/HubsExtension/PartType/MarkdownPart",
               "settings": {
                 "content": {
-                  "content": "__My data__\n\n<a href='https://shell.azure.com/powershell' target='_blank'>Az Cloud Shell</a>\n<br />\n<a href='https://vscode.dev/' target='_blank'>VScode.dev</a>\n\n__Reference__\n\n<a href='https://graphpermissions.merill.net/permission/' target='_blank'>Graph Permissions</a>\n",
+                  "content": "__My data__\n\n<a href='https://shell.azure.com/powershell' target='_blank'>Az Cloud Shell</a>\n<br />\n<a href='https://vscode.dev/' target='_blank'>VScode.dev</a>\n\n__Reference__\n\n<a href='https://graphpermissions.merill.net/permission/' target='_blank'>Graph Permissions</a>\n\n__Tools__\n\n<a href='https://app.clipchamp.com/' target='_blank'>Clip Champ</a>",
                   "title": "My title",
                   "subtitle": "My subtitle",
                   "markdownSource": 1,
